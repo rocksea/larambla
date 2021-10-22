@@ -1,0 +1,16 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+        {
+            "name": "larambla",
+            "image": "320811633077.dkr.ecr.ap-northeast-2.amazonaws.com/larambla:latest",
+            "memory": 1024,
+            "portMappings": [
+                {
+                    "hostPort": 5000,
+                    "containerPort": 5000
+                }
+            ]
+        }
+    ]
+}
