@@ -1,4 +1,5 @@
 server:
+
   forward-headers-strategy: FRAMEWORK
   error:
     whitelabel:
@@ -18,3 +19,10 @@ spring:
     driverClassName: org.h2.Driver
     username: sa
     password:
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, prometheus

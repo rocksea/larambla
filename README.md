@@ -3,7 +3,7 @@ LaRambla project is a project to help build k8s-based microservices.
 Each service runs on docker container.
 
 ### Containerization
-You should Dockerizing and push to ECR.
+You should build Dockerizing and push to ECR.
 ```
 $ aws configure
 $ aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin xxxxxxx.dkr.ecr.ap-northeast-2.amazonaws.com
