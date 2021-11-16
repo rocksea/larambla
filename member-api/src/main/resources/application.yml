@@ -1,5 +1,4 @@
 server:
-
   forward-headers-strategy: FRAMEWORK
   error:
     whitelabel:
@@ -9,17 +8,28 @@ server:
 spring:
   profiles:
     active: default
-  jpa:
-    hibernate:
-      ddl-auto: create
-      dialect: org.hibernate.dialect.H2Dialect
-
   datasource:
-    url: jdbc:h2:mem:testdb
-    driverClassName: org.h2.Driver
-    username: sa
-    password:
+    #initialization-mode: never
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:larambla}
+    username: ${DB_USERNAME:larambla}
+    password: ${DB_PASSWORD:larambla}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: ${DB_DDL_AUTO:validate}
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 
+kafka:
+  bootstrap-servers: localhost:9092
+  username:
+  password:
+  enable:
+    auto:
+      commit: false
+  ackmode: MANUAL
+  offset.reset: latest
 
 management:
   endpoints:

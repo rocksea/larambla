@@ -2,7 +2,7 @@
  * Copyright 2021 ROCKSEA. All rights Reserved.
  * ROCKSEA PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
-package kr.co.larambla;
+package kr.co.larambla.member.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;

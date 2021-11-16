@@ -2,7 +2,7 @@
  * Copyright 2021 ROCKSEA. All rights Reserved.
  * ROCKSEA PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
-package kr.co.larambla.presentation;
+package kr.co.larambla.member.presentation;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
