@@ -3,16 +3,16 @@ server:
   error:
     whitelabel:
       enabled: false
-  port: ${SERVER_PORT:5000}
+  port: ${SERVER_PORT:8080}
 
 spring:
   profiles:
     active: default
   datasource:
     #initialization-mode: never
-    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:larambla}
-    username: ${DB_USERNAME:larambla}
-    password: ${DB_PASSWORD:larambla}
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME}?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     show-sql: true

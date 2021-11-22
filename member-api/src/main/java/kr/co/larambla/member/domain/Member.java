@@ -4,10 +4,7 @@
  */
 package kr.co.larambla.member.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.*;
 
@@ -18,7 +15,7 @@ import lombok.*;
 @Entity
 @Table(name = "member")
 public class Member {
-    @Id private String id;
+    @Id @GeneratedValue private Integer id;
     @Column private String name;
     @Column private Integer age;
 }
