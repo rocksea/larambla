@@ -1,0 +1,14 @@
+package kr.co.larambla.member.application.query.exception;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+import reactor.core.publisher.Mono;
+
+@RestControllerAdvice
+public class MemberNotFoundExceptionHandler {
+    @ExceptionHandler({MemberNotFoundException.class})
+    public Mono<ResponseEntity<String>> memberNotFoundException(MemberNotFoundException e) {
+        return Mono.just(ResponseEntity.notFound().build());
+    }
+}
