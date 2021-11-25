@@ -2,6 +2,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/docker,macOS,Windows,php,node,composer,Docker,Terraform,terraform,Terragrunt,idea,Intellij,intellij,vscode,Vscode,java,php,Java,kotlin,Kotlin,terragrunt,Terragrunt,phpstorm,Packer,packer,Ansible,ansible,gradle,Gradle
 # Edit at https://www.toptal.com/developers/gitignore?templates=docker,macOS,Windows,php,node,composer,Docker,Terraform,terraform,Terragrunt,idea,Intellij,intellij,vscode,Vscode,java,php,Java,kotlin,Kotlin,terragrunt,Terragrunt,phpstorm,Packer,packer,Ansible,ansible,gradle,Gradle
 
+### Swap files ###
+*.swp
+
 ### Ansible ###
 *.retry
 
