@@ -1,8 +1,13 @@
+/*
+ * Copyright 2021 ROCKSEA. All rights Reserved.
+ * ROCKSEA PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+ */
 package kr.co.larambla.member.application.query.exception;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+
 import reactor.core.publisher.Mono;
 
 @RestControllerAdvice

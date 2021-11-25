@@ -1,5 +1,9 @@
-plugins {
-	id 'java'
+bootJar {
+	enabled = false
+}
+
+jar {
+	enabled = true
 }
 
 group 'kr.co.larambla'

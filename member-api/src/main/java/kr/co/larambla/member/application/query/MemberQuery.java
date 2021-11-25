@@ -4,9 +4,9 @@
  */
 package kr.co.larambla.member.application.query;
 
-import kr.co.larambla.member.application.query.exception.MemberNotFoundException;
 import org.springframework.stereotype.Service;
 
+import kr.co.larambla.member.application.query.exception.MemberNotFoundException;
 import kr.co.larambla.member.domain.Member;
 import kr.co.larambla.member.domain.repository.MemberRepository;
 
@@ -20,7 +20,9 @@ public class MemberQuery {
 
     public MemberQueryResult getMemberById(Integer id) {
         Member member =
-                memberRepository.findById(id).orElseThrow(() -> new MemberNotFoundException("문제가 존재하지 않습니다."));
+                memberRepository
+                        .findById(id)
+                        .orElseThrow(() -> new MemberNotFoundException("문제가 존재하지 않습니다."));
         MemberQueryResult memberQueryResult =
                 MemberQueryResult.builder()
                         .id(member.getId())
