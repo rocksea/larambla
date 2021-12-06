@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import kr.co.larambla.core.cqrs.command.CommandHandler;
-import kr.co.larambla.member.application.command.AddNewMember;
+import kr.co.larambla.member.domain.command.AddNewMember;
 import kr.co.larambla.member.presentation.http.vo.MemberParam;
 
 @RestController

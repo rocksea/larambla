@@ -26,3 +26,18 @@ Consumer Test
 $ bin/kafka-console-consumer.sh --topic larambla-member --bootstrap-server localhost:9092 --from-beginning
 {"id":"1234"}
 ```
+
+Create a Database
+```
+mysql> create database larambla;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> create user 'larambla'@'%' identified by 'larambla';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> grant all privileges on larambla.* to 'larambla'@'%';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> flush privileges;
+Query OK, 0 rows affected (0.00 sec)
+```

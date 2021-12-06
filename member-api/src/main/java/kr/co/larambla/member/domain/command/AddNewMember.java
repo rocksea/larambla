@@ -2,7 +2,7 @@
  * Copyright 2021 ROCKSEA. All rights Reserved.
  * ROCKSEA PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
-package kr.co.larambla.member.application.command;
+package kr.co.larambla.member.domain.command;
 
 import kr.co.larambla.core.cqrs.command.Command;
 import lombok.Builder;

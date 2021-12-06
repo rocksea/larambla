@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import kr.co.larambla.member.application.query.MemberQuery;
-import kr.co.larambla.member.application.query.MemberQueryResult;
+import kr.co.larambla.member.domain.query.MemberQuery;
+import kr.co.larambla.member.domain.query.MemberQueryResult;
 import reactor.core.publisher.Mono;
 
 @RestController

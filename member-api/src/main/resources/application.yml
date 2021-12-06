@@ -34,5 +34,6 @@ kafka:
 management:
   endpoints:
     web:
+      base-path: /member/actuator
       exposure:
         include: health, info, prometheus

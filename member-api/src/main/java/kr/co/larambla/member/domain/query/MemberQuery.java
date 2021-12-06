@@ -2,11 +2,11 @@
  * Copyright 2021 ROCKSEA. All rights Reserved.
  * ROCKSEA PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
-package kr.co.larambla.member.application.query;
+package kr.co.larambla.member.domain.query;
 
 import org.springframework.stereotype.Service;
 
-import kr.co.larambla.member.application.query.exception.MemberNotFoundException;
+import kr.co.larambla.member.domain.query.exception.MemberNotFoundException;
 import kr.co.larambla.member.domain.Member;
 import kr.co.larambla.member.domain.repository.MemberRepository;
 
@@ -22,7 +22,7 @@ public class MemberQuery {
         Member member =
                 memberRepository
                         .findById(id)
-                        .orElseThrow(() -> new MemberNotFoundException("문제가 존재하지 않습니다."));
+                        .orElseThrow(() -> new MemberNotFoundException("회원이 존재하지 않습니다."));
         MemberQueryResult memberQueryResult =
                 MemberQueryResult.builder()
                         .id(member.getId())
