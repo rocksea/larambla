@@ -4,9 +4,11 @@
  */
 package kr.co.larambla.member.presentation.http;
 
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import kr.co.larambla.member.domain.query.MemberQuery;
@@ -14,19 +16,20 @@ import kr.co.larambla.member.domain.query.MemberQueryResult;
 import reactor.core.publisher.Mono;
 
 @RestController
-public class MemberQueryController {
+@RequestMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
+public class GetMemberController {
     final MemberQuery memberQuery;
 
-    public MemberQueryController(MemberQuery memberQuery) {
+    public GetMemberController(MemberQuery memberQuery) {
         this.memberQuery = memberQuery;
     }
 
-    @GetMapping("/")
+    @GetMapping
     public Mono<String> getHello() {
         return Mono.just("Hello world");
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("{id}")
     public Mono<ResponseEntity<MemberQueryResult>> getMember(@PathVariable("id") Integer id) {
         return Mono.just(ResponseEntity.ok().body(memberQuery.getMemberById(id)));
     }

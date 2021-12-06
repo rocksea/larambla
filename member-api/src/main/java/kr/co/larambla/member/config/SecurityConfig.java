@@ -32,8 +32,6 @@ public class SecurityConfig {
                         (swe, e) ->
                                 Mono.fromRunnable(() -> swe.getResponse().setStatusCode(HttpStatus.FORBIDDEN)))
                 .and()
-                // .authenticationManager(authenticationManager)
-                // .securityContextRepository(securityContextRepository)
                 .authorizeExchange()
                 .pathMatchers("/**")
                 .permitAll()

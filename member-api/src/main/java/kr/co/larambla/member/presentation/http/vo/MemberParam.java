@@ -4,6 +4,8 @@
  */
 package kr.co.larambla.member.presentation.http.vo;
 
+import javax.validation.constraints.NotNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,6 +14,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MemberParam {
-    private String name;
-    private Integer age;
+    @NotNull private String name;
+    @NotNull private Integer age;
 }

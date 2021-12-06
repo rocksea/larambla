@@ -36,4 +36,4 @@ management:
     web:
       base-path: /member/actuator
       exposure:
-        include: health, info, prometheus
+        include: health, info, metrics, prometheus

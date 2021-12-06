@@ -4,6 +4,8 @@
  */
 package kr.co.larambla.member.presentation.http;
 
+import javax.validation.Valid;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,16 +14,17 @@ import kr.co.larambla.member.domain.command.AddNewMember;
 import kr.co.larambla.member.presentation.http.vo.MemberParam;
 
 @RestController
-public class AddMemberCommandController {
+@RequestMapping(value = "/")
+public class AddMemberController {
     final CommandHandler<AddNewMember> addNewMemberCommandHandler;
 
-    public AddMemberCommandController(CommandHandler<AddNewMember> addNewMemberCommandHandler) {
+    public AddMemberController(CommandHandler<AddNewMember> addNewMemberCommandHandler) {
         this.addNewMemberCommandHandler = addNewMemberCommandHandler;
     }
 
-    @PostMapping("/man")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void addMember(@RequestBody MemberParam memberParam) {
+    public void addMember(@Valid @RequestBody MemberParam memberParam) {
         AddNewMember addNewMember =
                 AddNewMember.builder().name(memberParam.getName()).age(memberParam.getAge()).build();
         addNewMemberCommandHandler.handle(addNewMember);
