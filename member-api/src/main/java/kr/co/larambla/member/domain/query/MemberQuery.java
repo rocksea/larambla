@@ -6,8 +6,8 @@ package kr.co.larambla.member.domain.query;
 
 import org.springframework.stereotype.Service;
 
-import kr.co.larambla.member.domain.query.exception.MemberNotFoundException;
 import kr.co.larambla.member.domain.Member;
+import kr.co.larambla.member.domain.query.exception.MemberNotFoundException;
 import kr.co.larambla.member.domain.repository.MemberRepository;
 
 @Service
